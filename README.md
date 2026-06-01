@@ -11,7 +11,8 @@ This repository contains production-grade SQL scripts optimized for advanced dat
 * **Window Functions:** Employing `ROW_NUMBER()` paired with `PARTITION BY` and `ORDER BY` to isolate the single most recent lab result per patient.
 * **Date & Timestamp Manipulation:** Implementing strict date boundaries (`>= '2026-02-01'`) and data formatting tools.
 * **Conditional Handling:** Using `COALESCE()` to cleanly substitute potential `NULL` database returns with clear, operational values (e.g., displaying `0` instead of blank spaces for total appointments).
-
+* **Conditional Logic (`CASE WHEN`):** Implementing multi-branch conditional loops directly within the data pipeline to synthesize new categorical indicators based on continuous clinical thresholds.
+* **Advanced Text Filtering (`LIKE` / `ILIKE`):** Applying case-insensitive wildcard searches (`%`) to robustly isolate specific target groups within unstructured or variable text fields.
 ## 📊 Database Schema Summary
 The extraction pipeline interacts with three core tables:
 1. **`patients`**: Master demographic and enrollment records.
